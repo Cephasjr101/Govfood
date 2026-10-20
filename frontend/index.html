@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GovFood — Food Supply for Government Workers</title>
+<meta name="description" content="GovFood — verified government workers order foodstuffs at KG prices with GHc500 monthly credit, instant MoMo/card payment, and live rider delivery tracking.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231E7A3C'/%3E%3Cpath d='M9 21c4-9 10-12 15-12-1 6-4 11-12 13z' fill='%23fff'/%3E%3C/svg%3E">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#/"><svg class="brand-mark" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#1E7A3C"/><path d="M9 21c4-9 10-12 15-12-1 6-4 11-12 13z" fill="#fff"/></svg><span class="brand-name">Gov<em>Food</em></span></a>
+  <nav class="mainnav" id="mainnav">
+    <a href="#/" data-nav="home">Shop</a>
+    <a href="#/orders" data-nav="orders">My Orders</a>
+    <a href="#/rider" data-nav="rider" id="nav-rider" hidden>Rider</a>
+    <a href="#/admin" data-nav="admin" id="nav-admin" hidden>Admin</a>
+  </nav>
+  <div class="topbar-right">
+    <button class="btn btn-ghost btn-sm" id="btn-auth">Sign in</button>
+    <div class="user-chip" id="user-chip" hidden>
+      <span class="user-avatar" id="user-avatar">G</span>
+      <div class="user-menu" id="user-menu" hidden>
+        <div class="user-menu-name" id="user-menu-name"></div>
+        <a href="#/profile">My profile & credit</a>
+        <a href="#/notifications">Notifications</a>
+        <a href="#/rider" id="menu-rider" hidden>Rider dashboard</a>
+        <a href="#/admin" id="menu-admin" hidden>Admin panel</a>
+        <button id="btn-logout">Sign out</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main id="app" class="app"></main>
+<footer class="footer"><div class="footer-grid">
+  <div><div class="brand-name footer-brand">Gov<em>Food</em></div>
+  <p>Affordable foodstuffs for government workers — verified accounts, GHc500 monthly credit, live rider tracking.</p></div>
+  <div><h4>Platform</h4><a href="#/">Shop</a><a href="#/orders">Orders</a><a href="#/profile">Credit & verification</a></div>
+  <div><h4>Riders</h4><a href="#/rider">Rider dashboard</a><a href="#/rider">Register as rider</a></div>
+  <div><h4>Contact</h4><p>📞 +233 55 193 4922</p><p>✉️ hello@govfood.com</p><p>📍 Accra, Ghana</p></div>
+</div><div class="footer-base">© 2026 GovFood · In partnership with the Ministry of Agriculture</div></footer>
+<div class="toast-root" id="toast-root" aria-live="polite"></div>
+<div class="modal-root" id="modal-root" hidden style="display:none"><div class="modal-backdrop" id="modal-backdrop"></div><div class="modal-card" id="modal-card"></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
